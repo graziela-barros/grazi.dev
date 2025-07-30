@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Botão hambúrguer -->
+  <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+
   <div class="container">
     <div class="sidebar">
       <div class="logo">G</div>
@@ -26,11 +30,13 @@
         <h1>Olá, eu sou a Graziela</h1>
         <h2>Desenvolvedora</h2>
         <p>Atuo com desenvolvimento de sites e aplicativos, unindo criatividade, técnica e qualidade em cada projeto que realizo</p>
-        <button class="btn"><a class="link_botao" href="https://www.instagram.com/profgrazielabarros/">Mais sobre mim</a></button>
+        <button class="btn">
+          <a class="link_botao" href="https://www.instagram.com/profgrazielabarros/">Mais sobre mim</a>
+        </button>
         <div class="contact-info">
           <div class="contact-item">
             <strong>Git</strong>
-           graziela-barros
+            graziela-barros
           </div>
           <div class="contact-item">
             <strong>Whatsapp</strong>
@@ -43,9 +49,20 @@
         </div>
       </div>
       <div class="profile-img">
-        <img src="graziela.png" alt="Profile Picture" />
+        <img src="graziela.png" alt="Minha imagem" />
       </div>
     </div>
   </div>
+
+  <!-- Script para abrir/fechar o menu no mobile -->
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+
 </body>
 </html>
